@@ -38,42 +38,58 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <div class="hero__badge">
-                        <span class="hero__badge-icon">▶</span> AI & Automation Experts
+        <section
+            class="relative h-[90vh] min-h-[600px] flex items-center bg-bg-dark text-text-dark-bg overflow-hidden -mt-20 pt-[120px]">
+            <div class="max-w-[1200px] mx-auto px-8 w-full relative z-[2]">
+                <div class="max-w-[600px]">
+                    <div class="inline-flex items-center text-[13px] font-medium mb-8 opacity-90">
+                        <span
+                            class="mr-2 text-[10px] border border-current rounded-full w-4 h-4 flex items-center justify-center">▶</span>
+                        AI & Automation Experts
                     </div>
-                    <h1 class="hero__title">Empowering Innovation with AI</h1>
-                    <p class="hero__subtitle">We tailor your application to your organization's exact needs, using
+                    <h1 class="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[1.1] tracking-tight mb-8">
+                        Empowering Innovation with AI</h1>
+                    <p class="text-lg leading-[1.6] mb-16 opacity-90 max-w-[480px]">We tailor your application to your
+                        organization's exact needs, using
                         robust frameworks and best practices for long-term success.</p>
 
-                    <form class="hero__form">
-                        <input type="email" placeholder="Enter your email" class="hero__input" required>
-                        <button type="submit" class="btn btn--primary">Get a free consultation</button>
+                    <form class="flex flex-col sm:flex-row gap-2 mb-8 max-w-[450px] bg-white p-1 rounded-md">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 border-none px-4 text-base outline-none text-gray-800 bg-transparent min-w-0"
+                            required>
+                        <button type="submit"
+                            class="inline-flex items-center justify-center px-8 h-12 rounded font-medium transition-all duration-200 bg-gradient-to-br from-indigo-600 to-pink-500 text-white shadow-[0_4px_6px_-1px_rgba(79,70,229,0.4)] border border-white/10 hover:from-indigo-700 hover:to-pink-600 hover:-translate-y-[1px] w-full sm:w-auto mt-2 sm:mt-0">Get
+                            a free consultation</button>
                     </form>
-
-                    <!-- Link removed -->
                 </div>
             </div>
-            <div class="hero__background">
-                <!-- Placeholder for background video/image. Using CSS gradient for now -->
+            <div class="absolute inset-0 w-full h-full z-[1] bg-cover bg-center"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+                <!-- Background image -->
             </div>
         </section>
 
         <!-- Social Proof Section Placeholder -->
         <!-- Social Proof Section -->
-        <section class="logos-bar">
-            <div class="container logos-bar__container">
-                <p class="logos-bar__text">Powered by modern technologies</p>
-                <div class="logos-bar__grid">
-                    <span class="logo-item">OpenAI</span>
-                    <span class="logo-item">Google Workspace</span>
-                    <span class="logo-item">Python</span>
-                    <span class="logo-item">React</span>
-                    <span class="logo-item">Node.js</span>
-                    <span class="logo-item">n8n</span>
-                    <span class="logo-item">PHP</span>
+        <section class="py-16 border-b border-border bg-white">
+            <div class="max-w-[1200px] mx-auto px-8 w-full">
+                <p class="text-center mb-8 text-text-light text-sm">Powered by modern technologies</p>
+                <div class="flex justify-center flex-wrap gap-16 opacity-50">
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">OpenAI</span>
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">Google
+                        Workspace</span>
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">Python</span>
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">React</span>
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">Node.js</span>
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">n8n</span>
+                    <span
+                        class="font-semibold text-[1.2rem] text-gray-800 grayscale transition-all duration-300 hover:grayscale-0">PHP</span>
                 </div>
             </div>
         </section>
