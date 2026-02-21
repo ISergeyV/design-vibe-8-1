@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Heroes | Empowering Innovation with AI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="container navbar__container">
-            <a href="#" class="navbar__logo" aria-label="AI Heroes Home">AI Heroes</a>
-            <nav class="navbar__nav">
-                <ul class="navbar__menu">
-                    <li><a href="#" class="navbar__link">Services</a></li>
-                    <li><a href="#" class="navbar__link">Features</a></li>
-                    <li><a href="#" class="navbar__link">FAQ</a></li>
-                    <li><a href="#" class="navbar__link">Contact</a></li>
+    <header class="sticky top-0 z-[1000] bg-white border-b border-transparent transition-colors duration-300">
+        <div class="max-w-[1200px] mx-auto px-8 w-full flex items-center justify-between h-20">
+            <a href="#" class="font-bold text-2xl tracking-tight lg:mr-8 hover:opacity-80 transition-opacity"
+                aria-label="AI Heroes Home">AI Heroes</a>
+            <nav class="flex-1 hidden md:block">
+                <ul class="flex gap-8">
+                    <li><a href="#"
+                            class="text-sm font-medium text-text hover:opacity-80 transition-opacity">Services</a></li>
+                    <li><a href="#"
+                            class="text-sm font-medium text-text hover:opacity-80 transition-opacity">Features</a></li>
+                    <li><a href="#" class="text-sm font-medium text-text hover:opacity-80 transition-opacity">FAQ</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-sm font-medium text-text hover:opacity-80 transition-opacity">Contact</a></li>
                 </ul>
             </nav>
-            <div class="navbar__actions">
-                <a href="#" class="btn btn--primary">Get Started</a>
+            <div class="flex items-center gap-4">
+                <a href="#"
+                    class="inline-flex items-center justify-center px-8 h-12 rounded font-medium transition-all duration-200 bg-gradient-to-br from-indigo-600 to-pink-500 text-white shadow-[0_4px_6px_-1px_rgba(79,70,229,0.4)] border border-white/10 hover:from-indigo-700 hover:to-pink-600 hover:shadow-[0_10px_15px_-3px_rgba(79,70,229,0.5)] hover:-translate-y-[1px]">Get
+                    Started</a>
             </div>
         </div>
     </header>
@@ -371,7 +379,7 @@
         </section>
 
         <!-- Bottom CTA -->
-        <section class="section bottom-cta">
+        <section class="section bottom-cta" id="contact">
             <div class="container text-center">
                 <h2 class="section-title">Ready to transform your business?</h2>
                 <div class="cta-form-container">
@@ -379,6 +387,18 @@
                         <input type="email" placeholder="Enter your email" class="hero__input" required>
                         <button type="submit" class="btn btn--primary">Get a free consultation</button>
                     </form>
+                    <div class="contact-direct" style="margin-top: 2rem; color: var(--color-text-light);">
+                        <p style="margin-bottom: 0.5rem;">Or reach us directly:</p>
+                        <div
+                            style="display: flex; flex-direction: column; gap: 0.5rem; justify-content: center; align-items: center;">
+                            <a href="#" class="js-email-link"
+                                style="color: var(--color-text); font-weight: 600; text-decoration: none;">[Loading
+                                Email...]</a>
+                            <a href="#" class="js-phone-link"
+                                style="color: var(--color-text); font-weight: 600; text-decoration: none;">[Loading
+                                Phone...]</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -413,8 +433,8 @@
                 <div class="footer__col">
                     <h4>Contact</h4>
                     <ul class="footer__links">
-                        <li><a href="mailto:info@aiheroes.net">info@aiheroes.net</a></li>
-                        <li><a href="tel:+17147592071">+1 (714) 759-2071</a></li>
+                        <li><a href="#" class="js-email-link">[Loading Email...]</a></li>
+                        <li><a href="#" class="js-phone-link">[Loading Phone...]</a></li>
                     </ul>
                 </div>
             </div>
@@ -427,6 +447,38 @@
             </div>
         </div>
     </footer>
+
+    <!-- Anti-bot protection script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obfuscated parts to prevent simple scraping
+            const parts = {
+                u: 'info',
+                d: 'aiheroes.net',
+                p1: '714',
+                p2: '759',
+                p3: '2071',
+                c: '1'
+            };
+
+            // Reconstruct email
+            const email = `${parts.u}@${parts.d}`;
+            const emailLinks = document.querySelectorAll('.js-email-link');
+            emailLinks.forEach(link => {
+                link.href = `mailto:${email}`;
+                link.innerText = email;
+            });
+
+            // Reconstruct phone
+            const phoneDisplay = `+${parts.c} (${parts.p1}) ${parts.p2}-${parts.p3}`;
+            const phoneLink = `+${parts.c}${parts.p1}${parts.p2}${parts.p3}`;
+            const phoneLinks = document.querySelectorAll('.js-phone-link');
+            phoneLinks.forEach(link => {
+                link.href = `tel:${phoneLink}`;
+                link.innerText = phoneDisplay;
+            });
+        });
+    </script>
 </body>
 
 </html>
